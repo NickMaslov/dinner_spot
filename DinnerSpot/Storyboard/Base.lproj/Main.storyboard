@@ -172,21 +172,91 @@
                                     </connections>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2nh-ms-0Ke">
-                                        <rect key="frame" x="0.0" y="469.33333396911621" width="390" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantDetailTextCell" id="2nh-ms-0Ke" customClass="RestaurantDetailTextCell" customModule="DinnerSpot" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="469.33333396911621" width="390" height="39.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2nh-ms-0Ke" id="cfV-jm-ibU">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="39.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2A2-PL-6j7">
+                                                    <rect key="frame" x="20" y="10.999999999999998" width="350" height="17.333333333333329"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2A2-PL-6j7" firstAttribute="top" secondItem="cfV-jm-ibU" secondAttribute="topMargin" id="Kb1-Pz-iDV"/>
+                                                <constraint firstItem="2A2-PL-6j7" firstAttribute="leading" secondItem="cfV-jm-ibU" secondAttribute="leadingMargin" id="UF6-gZ-Ru9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="2A2-PL-6j7" secondAttribute="trailing" id="Yw9-Fo-yhc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2A2-PL-6j7" secondAttribute="bottom" id="mS0-Y8-Itp"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="2A2-PL-6j7" id="z9Y-fc-8lK"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6PV-7M-jTC">
-                                        <rect key="frame" x="0.0" y="513.00000190734863" width="390" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantDetailTwoColumnCell" id="6PV-7M-jTC" customClass="RestaurantDetailTwoColumnCell" customModule="DinnerSpot" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="508.66666603088379" width="390" height="64.333335876464844"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6PV-7M-jTC" id="p3x-aT-gOC">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="64.333335876464844"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HsN-DB-tME">
+                                                    <rect key="frame" x="20" y="11.000000000000004" width="350" height="42.333333333333343"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EMD-4g-Mti">
+                                                            <rect key="frame" x="0.0" y="0.0" width="170" height="42"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADDRESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be7-Ta-Agu">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="17"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iv0-XJ-LAw">
+                                                                    <rect key="frame" x="0.0" y="25" width="170" height="17"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4Y0-2w-yty">
+                                                            <rect key="frame" x="180" y="0.0" width="170" height="42"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PHONE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDv-gB-6l4">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="17"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkX-qx-6h3">
+                                                                    <rect key="frame" x="0.0" y="25" width="170" height="17"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="HsN-DB-tME" secondAttribute="trailing" id="8rE-hu-zOF"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="HsN-DB-tME" secondAttribute="bottom" id="TwZ-fu-yle"/>
+                                                <constraint firstItem="HsN-DB-tME" firstAttribute="top" secondItem="p3x-aT-gOC" secondAttribute="topMargin" id="dza-Tw-jHc"/>
+                                                <constraint firstItem="HsN-DB-tME" firstAttribute="leading" secondItem="p3x-aT-gOC" secondAttribute="leadingMargin" id="tIj-WG-GMf"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="column1TextLabel" destination="iv0-XJ-LAw" id="1bt-xV-zBi"/>
+                                            <outlet property="column1TitleLabel" destination="be7-Ta-Agu" id="9pB-36-c9I"/>
+                                            <outlet property="column2TextLabel" destination="KDv-gB-6l4" id="4bh-dO-VQ5"/>
+                                            <outlet property="column2TitleLabel" destination="xkX-qx-6h3" id="Xht-wl-8oq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
