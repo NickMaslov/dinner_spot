@@ -182,12 +182,12 @@ class RestaurantTableViewController: UITableViewController {
     
     // MARK: - Navigation
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showRestaurantDetail" {
-//            if let indexPath = tableView.indexPathForSelectedRow {
-//                let destinationController = segue.destination as! RestaurantDetailViewController
-//                destinationController.restaurant = self.restaurants[indexPath.row]
-//            }
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showRestaurantDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationController = segue.destination as! RestaurantDetailViewController
+                destinationController.restaurant = self.restaurants[indexPath.row]
+            }
+        }
+    }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522331A826D94DF600B4A33C /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522331A726D94DF600B4A33C /* RestaurantDetailViewController.swift */; };
+		522331AA26D9559D00B4A33C /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522331A926D9559D00B4A33C /* RestaurantDetailHeaderView.swift */; };
 		52AA1E8B2673CE1900F2CF04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA1E8A2673CE1900F2CF04 /* AppDelegate.swift */; };
 		52AA1E8D2673CE1900F2CF04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA1E8C2673CE1900F2CF04 /* SceneDelegate.swift */; };
 		52AA1E922673CE1900F2CF04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AA1E902673CE1900F2CF04 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		522331A726D94DF600B4A33C /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
+		522331A926D9559D00B4A33C /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
 		52AA1E872673CE1900F2CF04 /* DinnerSpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DinnerSpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AA1E8A2673CE1900F2CF04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52AA1E8C2673CE1900F2CF04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				52F5C0D026C7179B00D9F523 /* RestaurantTableViewCell.swift */,
+				522331A926D9559D00B4A33C /* RestaurantDetailHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -94,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				52F5C0CE26C7167100D9F523 /* RestaurantTableViewController.swift */,
+				522331A726D94DF600B4A33C /* RestaurantDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -215,6 +221,8 @@
 			files = (
 				52F5C0CB26C7144A00D9F523 /* Restaurant.swift in Sources */,
 				52F5C0CF26C7167100D9F523 /* RestaurantTableViewController.swift in Sources */,
+				522331A826D94DF600B4A33C /* RestaurantDetailViewController.swift in Sources */,
+				522331AA26D9559D00B4A33C /* RestaurantDetailHeaderView.swift in Sources */,
 				52F5C0C926C7100B00D9F523 /* UIColor+Ext.swift in Sources */,
 				52F5C0D126C7179B00D9F523 /* RestaurantTableViewCell.swift in Sources */,
 				52AA1E8B2673CE1900F2CF04 /* AppDelegate.swift in Sources */,
