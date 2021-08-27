@@ -12,16 +12,22 @@ class RestaurantDetailViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var headerView: RestaurantDetailHeaderView!
     
-    var restaurant = Restaurant()
+    var restaurant: Restaurant = Restaurant()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Configure the navigation bar appearance
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationController?.hidesBarsOnSwipe = false
+        
+        tableView.contentInsetAdjustmentBehavior = .never
         
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
 
-        navigationController?.navigationBar.prefersLargeTitles = false
+        
 
         // Configure header view
         headerView.nameLabel.text = restaurant.name
@@ -31,8 +37,18 @@ class RestaurantDetailViewController: UIViewController {
         let heartImage = restaurant.isFavorite ? "heart.fill" : "heart"
         headerView.heartButton.tintColor = restaurant.isFavorite ? .systemYellow : .white
         headerView.heartButton.setImage(UIImage(systemName: heartImage), for: .normal)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
         
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
 

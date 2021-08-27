@@ -137,7 +137,7 @@
                                             </subviews>
                                         </stackView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJj-vE-qhy">
-                                            <rect key="frame" x="343" y="10" width="37" height="31"/>
+                                            <rect key="frame" x="343" y="18" width="37" height="31"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="31" id="Dh7-op-f6v"/>
                                                 <constraint firstAttribute="width" constant="37" id="dyz-EM-nJz"/>
@@ -156,8 +156,8 @@
                                         <constraint firstAttribute="trailing" secondItem="7Qz-8n-max" secondAttribute="trailing" constant="150" id="6uV-1A-Ov2"/>
                                         <constraint firstAttribute="bottom" secondItem="7Qz-8n-max" secondAttribute="bottom" constant="20" id="ASj-he-qru"/>
                                         <constraint firstItem="6Kz-1c-d9w" firstAttribute="leading" secondItem="Sop-Er-S2H" secondAttribute="leading" id="G1f-iG-Q8F"/>
-                                        <constraint firstItem="yJj-vE-qhy" firstAttribute="top" secondItem="Sop-Er-S2H" secondAttribute="top" constant="10" id="IMg-OJ-4VB"/>
                                         <constraint firstAttribute="trailing" secondItem="yJj-vE-qhy" secondAttribute="trailing" constant="10" id="T7R-rb-9fn"/>
+                                        <constraint firstItem="yJj-vE-qhy" firstAttribute="top" secondItem="Sop-Er-S2H" secondAttribute="topMargin" constant="10" id="Wvh-3Z-Iam"/>
                                         <constraint firstItem="6Kz-1c-d9w" firstAttribute="top" secondItem="Sop-Er-S2H" secondAttribute="top" id="jY8-vb-uD8"/>
                                         <constraint firstAttribute="bottom" secondItem="Wkf-oI-ipt" secondAttribute="bottom" id="pjr-oe-mE6"/>
                                         <constraint firstAttribute="trailing" secondItem="Wkf-oI-ipt" secondAttribute="trailing" id="qkZ-T2-2er"/>

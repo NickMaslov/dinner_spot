@@ -75,6 +75,14 @@ class RestaurantTableViewController: UITableViewController {
         tableView.cellLayoutMarginsFollowReadableWidth = true
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = true
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
     // MARK: - UITableView Diffable Data Source
     
     func configureDataSource() -> UITableViewDiffableDataSource<Section, Restaurant> {
