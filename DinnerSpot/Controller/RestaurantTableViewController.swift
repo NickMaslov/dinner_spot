@@ -47,11 +47,11 @@ class RestaurantTableViewController: UITableViewController {
         
         // Customize the navigation bar appearance
         if let appearance = navigationController?.navigationBar.standardAppearance {
-        
+
             appearance.configureWithTransparentBackground()
-            
+
             if let customFont = UIFont(name: "Nunito-Bold", size: 45.0) {
-                
+
                 appearance.titleTextAttributes = [.foregroundColor: UIColor(named: "NavigationBarTitle")!]
                 appearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "NavigationBarTitle")!, .font: customFont]
             }
@@ -81,6 +81,7 @@ class RestaurantTableViewController: UITableViewController {
         
         navigationController?.hidesBarsOnSwipe = true
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     // MARK: - UITableView Diffable Data Source
