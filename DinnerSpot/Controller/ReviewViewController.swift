@@ -37,41 +37,26 @@ class ReviewViewController: UIViewController {
             rateButton.alpha = 0
         }
         //closeButton animations
-        let moveSlideInFromTop = CGAffineTransform.init(translationX: 0, y: -600)
+        let moveSlideInFromTop = CGAffineTransform.init(translationX: 0, y: -60)
         closeButton.alpha = 0
         closeButton.transform = moveSlideInFromTop
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 0.4, delay: 0.1, options: [], animations: {
-            self.rateButtons[0].alpha = 1.0
-            self.rateButtons[0].transform = .identity
-        }, completion: nil)
         
-        UIView.animate(withDuration: 0.4, delay: 0.15,
-                       //                           usingSpringWithDamping: 0.2, initialSpringVelocity: 0.3,
-                       options: [], animations: {
-                        self.rateButtons[1].alpha = 1.0
-                        self.rateButtons[1].transform = .identity
-                        self.closeButton.alpha = 1.0
-                        self.closeButton.transform = .identity
-                       }, completion: nil)
+        var delay = 0.1
+        for i in 0..<5 {
+            UIView.animate(withDuration: 0.4, delay: delay, options: [], animations: {
+                self.rateButtons[i].alpha = 1.0
+                self.rateButtons[i].transform = .identity
+            }, completion: nil)
+            delay += 0.05
+        }
         
-        UIView.animate(withDuration: 0.4, delay: 0.2, options: [], animations: {
-            self.rateButtons[2].alpha = 1.0
-            self.rateButtons[2].transform = .identity
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 0.4, delay: 0.25, options: [], animations: {
-            self.rateButtons[3].alpha = 1.0
-            self.rateButtons[3].transform = .identity
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 0.4, delay: 0.3, options: [], animations: {
-            self.rateButtons[4].alpha = 1.0
-            self.rateButtons[4].transform = .identity
-        }, completion: nil)
-        
+        UIView.animate(withDuration: 0.4) {
+            self.closeButton.alpha = 1.0
+            self.closeButton.transform = .identity
+        }
     }
     
 }

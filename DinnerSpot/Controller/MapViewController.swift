@@ -64,8 +64,8 @@ extension MapViewController: MKMapViewDelegate {
             annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
         }
 
-//        annotationView?.glyphText = "😋"
-        annotationView?.glyphImage = UIImage(systemName: "arrowtriangle.down.circle")
+        annotationView?.glyphText = "😋"
+//        annotationView?.glyphImage = UIImage(systemName: "arrowtriangle.down.circle")
         annotationView?.markerTintColor = UIColor.orange
 
         return annotationView

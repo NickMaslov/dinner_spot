@@ -21,6 +21,8 @@
 		52AA1E972673CE1D00F2CF04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AA1E952673CE1D00F2CF04 /* LaunchScreen.storyboard */; };
 		52CD51D926E28FD300EB8AED /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD51D826E28FD300EB8AED /* NavigationController.swift */; };
 		52CD51DB26E29B4400EB8AED /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD51DA26E29B4400EB8AED /* ReviewViewController.swift */; };
+		52CD51DD26E2DE8C00EB8AED /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD51DC26E2DE8B00EB8AED /* RoundedTextField.swift */; };
+		52CD51DF26E2E0F400EB8AED /* NewRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD51DE26E2E0F400EB8AED /* NewRestaurantController.swift */; };
 		52F5C0C326C70EA600D9F523 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F5C0C126C70EA600D9F523 /* Nunito-Regular.ttf */; };
 		52F5C0C426C70EA600D9F523 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52F5C0C226C70EA600D9F523 /* Nunito-Bold.ttf */; };
 		52F5C0C926C7100B00D9F523 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5C0C826C7100B00D9F523 /* UIColor+Ext.swift */; };
@@ -47,6 +49,8 @@
 		52AA1E982673CE1D00F2CF04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52CD51D826E28FD300EB8AED /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		52CD51DA26E29B4400EB8AED /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		52CD51DC26E2DE8B00EB8AED /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		52CD51DE26E2E0F400EB8AED /* NewRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantController.swift; sourceTree = "<group>"; };
 		52F5C0C126C70EA600D9F523 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		52F5C0C226C70EA600D9F523 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		52F5C0C826C7100B00D9F523 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 				522331AB26D96B1100B4A33C /* RestaurantDetailTextCell.swift */,
 				522331AD26D96FA000B4A33C /* RestaurantDetailTwoColumnCell.swift */,
 				522331B226D9938900B4A33C /* RestaurantDetailMapCell.swift */,
+				52CD51DC26E2DE8B00EB8AED /* RoundedTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 				52CD51DA26E29B4400EB8AED /* ReviewViewController.swift */,
 				522331B426D99FE900B4A33C /* MapViewController.swift */,
 				52CD51D826E28FD300EB8AED /* NavigationController.swift */,
+				52CD51DE26E2E0F400EB8AED /* NewRestaurantController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -251,6 +257,7 @@
 			files = (
 				52F5C0CB26C7144A00D9F523 /* Restaurant.swift in Sources */,
 				52F5C0CF26C7167100D9F523 /* RestaurantTableViewController.swift in Sources */,
+				52CD51DF26E2E0F400EB8AED /* NewRestaurantController.swift in Sources */,
 				52CD51DB26E29B4400EB8AED /* ReviewViewController.swift in Sources */,
 				522331B326D9938900B4A33C /* RestaurantDetailMapCell.swift in Sources */,
 				522331AC26D96B1100B4A33C /* RestaurantDetailTextCell.swift in Sources */,
@@ -260,6 +267,7 @@
 				522331B526D99FE900B4A33C /* MapViewController.swift in Sources */,
 				52F5C0C926C7100B00D9F523 /* UIColor+Ext.swift in Sources */,
 				522331AE26D96FA000B4A33C /* RestaurantDetailTwoColumnCell.swift in Sources */,
+				52CD51DD26E2DE8C00EB8AED /* RoundedTextField.swift in Sources */,
 				52F5C0D126C7179B00D9F523 /* RestaurantTableViewCell.swift in Sources */,
 				52AA1E8B2673CE1900F2CF04 /* AppDelegate.swift in Sources */,
 				52F5C0CD26C714D600D9F523 /* RestaurantDiffableDataSource.swift in Sources */,
