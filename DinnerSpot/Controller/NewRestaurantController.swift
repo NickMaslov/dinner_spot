@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NewRestaurantController: UITableViewController {
     
@@ -53,9 +54,29 @@ class NewRestaurantController: UITableViewController {
         }
     }
     
-    @IBAction func saveSpot() {
-        print(nameTextField.text! , photoImageView.image ?? "")
+    var restaurant: Restaurant!
+    
+    @IBAction func saveButtonTapped(sender: AnyObject) {
+        print(nameTextField.text!)
+        
+        if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+            restaurant = Restaurant(context: appDelegate.persistentContainer.viewContext)
+            restaurant.name = nameTextField.text!
+            restaurant.type = typeTextField.text!
+            restaurant.location = addressTextField.text!
+            restaurant.phone = phoneTextField.text!
+            restaurant.summary = descriptionTextView.text
+            restaurant.isFavorite = false
+
+            if let imageData = photoImageView.image?.pngData() {
+                restaurant.image = imageData
+            }
+
+            print("Saving data to context...")
+            appDelegate.saveContext()
+        }
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

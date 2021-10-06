@@ -14,6 +14,7 @@
 		522331B126D98A8C00B4A33C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522331B026D98A8C00B4A33C /* MapKit.framework */; };
 		522331B326D9938900B4A33C /* RestaurantDetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522331B226D9938900B4A33C /* RestaurantDetailMapCell.swift */; };
 		522331B526D99FE900B4A33C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522331B426D99FE900B4A33C /* MapViewController.swift */; };
+		5249721827090BA20062C7F4 /* DinnerSpot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5249721627090BA20062C7F4 /* DinnerSpot.xcdatamodeld */; };
 		52AA1E8B2673CE1900F2CF04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA1E8A2673CE1900F2CF04 /* AppDelegate.swift */; };
 		52AA1E8D2673CE1900F2CF04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA1E8C2673CE1900F2CF04 /* SceneDelegate.swift */; };
 		52AA1E922673CE1900F2CF04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AA1E902673CE1900F2CF04 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		522331B026D98A8C00B4A33C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		522331B226D9938900B4A33C /* RestaurantDetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailMapCell.swift; sourceTree = "<group>"; };
 		522331B426D99FE900B4A33C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		5249721727090BA20062C7F4 /* DinnerSpot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DinnerSpot.xcdatamodel; sourceTree = "<group>"; };
 		52AA1E872673CE1900F2CF04 /* DinnerSpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DinnerSpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AA1E8A2673CE1900F2CF04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52AA1E8C2673CE1900F2CF04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				52F5C0BB26C70DE900D9F523 /* View */,
 				52F5C0BC26C70DF300D9F523 /* Controller */,
 				52AA1E8A2673CE1900F2CF04 /* AppDelegate.swift */,
+				5249721627090BA20062C7F4 /* DinnerSpot.xcdatamodeld */,
 				52AA1E8C2673CE1900F2CF04 /* SceneDelegate.swift */,
 				52AA1E932673CE1D00F2CF04 /* Assets.xcassets */,
 				52AA1E982673CE1D00F2CF04 /* Info.plist */,
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52F5C0CB26C7144A00D9F523 /* Restaurant.swift in Sources */,
+				5249721827090BA20062C7F4 /* DinnerSpot.xcdatamodeld in Sources */,
 				52F5C0CF26C7167100D9F523 /* RestaurantTableViewController.swift in Sources */,
 				52CD51DF26E2E0F400EB8AED /* NewRestaurantController.swift in Sources */,
 				52CD51DB26E29B4400EB8AED /* ReviewViewController.swift in Sources */,
@@ -473,6 +477,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5249721627090BA20062C7F4 /* DinnerSpot.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5249721727090BA20062C7F4 /* DinnerSpot.xcdatamodel */,
+			);
+			currentVersion = 5249721727090BA20062C7F4 /* DinnerSpot.xcdatamodel */;
+			path = DinnerSpot.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 52AA1E7F2673CE1900F2CF04 /* Project object */;
 }
