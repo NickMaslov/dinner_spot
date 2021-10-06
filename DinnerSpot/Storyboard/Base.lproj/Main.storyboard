@@ -215,7 +215,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="HRR-fw-nUn">
                             <connections>
-                                <action selector="saveButtonTapped" destination="dAs-uX-X52" id="oPn-DN-7M9"/>
+                                <action selector="saveButtonTapped:" destination="dAs-uX-X52" id="v5o-mt-DR8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -582,7 +582,9 @@
                             <constraint firstItem="weX-dh-qHS" firstAttribute="trailing" secondItem="eha-7V-0lY" secondAttribute="trailing" id="pGH-FM-3jy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="YT5-jY-kNK"/>
+                    <navigationItem key="navigationItem" id="YT5-jY-kNK">
+                        <barButtonItem key="rightBarButtonItem" image="heart" catalog="system" id="77z-ox-UKO"/>
+                    </navigationItem>
                     <size key="freeformSize" width="390" height="1200"/>
                     <connections>
                         <outlet property="headerView" destination="Sop-Er-S2H" id="RL4-rp-8q5"/>

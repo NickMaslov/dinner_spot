@@ -28,7 +28,9 @@ class RestaurantDetailViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
         
-        
+        if let rating = restaurant.rating {
+            headerView.ratingImageView.image = UIImage(named: rating.image)
+        }
         
         // Configure header view
         headerView.nameLabel.text = restaurant.name
@@ -36,6 +38,8 @@ class RestaurantDetailViewController: UIViewController {
         headerView.headerImageView.image = UIImage(data: restaurant.image)
         
         let heartImage = restaurant.isFavorite ? "heart.fill" : "heart"
+        navigationItem.rightBarButtonItem?.tintColor = restaurant.isFavorite ? .systemYellow : .white
+        navigationItem.rightBarButtonItem?.image = UIImage(systemName: heartImage)
         headerView.heartButton.tintColor = restaurant.isFavorite ? .systemYellow : .white
         headerView.heartButton.setImage(UIImage(systemName: heartImage), for: .normal)
     }
@@ -63,7 +67,7 @@ extension RestaurantDetailViewController: UITableViewDataSource, UITableViewDele
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailTextCell.self), for: indexPath) as! RestaurantDetailTextCell
             
-            cell.descriptionLabel.text = restaurant.description
+            cell.descriptionLabel.text = restaurant.summary
             
             return cell
             
@@ -120,6 +124,10 @@ extension RestaurantDetailViewController: UITableViewDataSource, UITableViewDele
             if let rating = Restaurant.Rating(rawValue: identifier) {
                 self.restaurant.rating = rating
                 self.headerView.ratingImageView.image = UIImage(named: rating.image)
+            }
+            
+            if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+                appDelegate.saveContext()
             }
             
             let scaleTransform = CGAffineTransform.init(scaleX: 0.1, y: 0.1)
