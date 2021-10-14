@@ -17,6 +17,8 @@ class RestaurantTableViewController: UITableViewController {
     var fetchResultController: NSFetchedResultsController<Restaurant>!
     
     lazy var dataSource = configureDataSource()
+    
+    var searchController: UISearchController!
    
     // MARK: - View controller life cycle
     
@@ -61,7 +63,19 @@ class RestaurantTableViewController: UITableViewController {
         
         // Prepare the empty view
         tableView.backgroundView = emptyRestaurantView
-        tableView.backgroundView?.isHidden = restaurants.count == 0 ? false : true
+        tableView.backgroundView?.isHidden = restaurants.count != 0 //? false : true
+        
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search restaurants..."
+        searchController.searchBar.backgroundImage = UIImage()
+        searchController.searchBar.tintColor = UIColor(named: "NavigationBarTitle")
+        // place searchBar to navigation bar
+//        self.navigationItem.searchController = searchController
+        // place searchBar to table view header
+        tableView.tableHeaderView = searchController.searchBar
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -99,6 +113,11 @@ class RestaurantTableViewController: UITableViewController {
     // MARK: - UITableViewDelegate Protocol
         
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        // disable actions in the search results
+        if searchController.isActive {
+            return UISwipeActionsConfiguration()
+        }
         
         // Get the selected restaurant
         guard let restaurant = self.dataSource.itemIdentifier(for: indexPath) else {
@@ -210,9 +229,14 @@ class RestaurantTableViewController: UITableViewController {
 extension RestaurantTableViewController: NSFetchedResultsControllerDelegate {
     // MARK: - Fetch util
     
-    func fetchRestaurantData() {
+    func fetchRestaurantData(searchText: String = "") {
         // Fetch data from data store
         let fetchRequest: NSFetchRequest<Restaurant> = Restaurant.fetchRequest()
+        
+        if !searchText.isEmpty {
+            fetchRequest.predicate = NSCompoundPredicate(orPredicateWithSubpredicates: [NSPredicate(format: "name CONTAINS[c] %@", searchText),NSPredicate(format: "location CONTAINS[c] %@", searchText)])
+        }
+        
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
 
@@ -223,7 +247,7 @@ extension RestaurantTableViewController: NSFetchedResultsControllerDelegate {
 
             do {
                 try fetchResultController.performFetch()
-                updateSnapshot()
+                updateSnapshot(animatingChange: searchText.isEmpty ? false : true)
             } catch {
                 print(error)
             }
@@ -245,5 +269,16 @@ extension RestaurantTableViewController: NSFetchedResultsControllerDelegate {
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         updateSnapshot()
+    }
+}
+
+extension RestaurantTableViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        
+        guard let searchText = searchController.searchBar.text else {
+            return
+        }
+        
+        fetchRestaurantData(searchText: searchText)
     }
 }
